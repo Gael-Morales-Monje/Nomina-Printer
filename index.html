@@ -1,0 +1,43 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="stylesheet" href="src/style.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Nomina printer</title>
+    <script defer src="src/main.js"></script>
+  </head>
+  <body>
+    <form id="form">
+      <h2>Nominas</h1>
+      <hr>
+      <div class="inputContainer">
+        <div class="text">
+          <label>Meses trabajados</label>
+          <input type="text" id="meses" placeholder="Meses trabajados" required>
+        </div>
+        <div class="text">
+          <label>Dias trabajados</label>
+          <input type="text" id="dias" placeholder="dias trabajados" required>
+        </div>
+        <div class="item">
+          <label for="inputSW">Salario Minimo</label>
+          <input type="number" id="inputSW" placeholder="salario minimo" value="278.80" disabled required>
+          <input class="checkboxSW" type="checkbox">
+          
+          
+        </div>
+        <div class="item">
+          <label for="inputUMA">UMA</label>
+          <input type="number" id="inputUMA" placeholder="salario minimo" value="108.57" disabled required>
+          <input class="checkboxUMA" type="checkbox">
+        </div>
+        <div>
+          <button>Calcular</button>
+        </div>
+      </div>
+      <hr>
+      <div class="info"></div>
+    </form>
+  </body>
+</html>
