@@ -1,4 +1,4 @@
-const $ = (value) => document.querySelector(value)
+const $ = (value) => {return document.querySelector(value)}
 
 
 
@@ -34,6 +34,9 @@ const info = $('.info')
 
 document.getElementById('form').addEventListener('submit', (e) => {
   e.preventDefault()
+  
+  info.innerHTML = ''
+
 
   const bonusPerMonth = 15/12
   let bonusMonth = bonusPerMonth * months.value
@@ -44,7 +47,7 @@ document.getElementById('form').addEventListener('submit', (e) => {
   
   const bonusTotal = bonus * inputSW.value
 
-  info.innerHTML += `<div class='infoContainer'>${bonus} dias x ${inputSW.value}$ = ${bonusTotal}$</div>`
+  info.innerHTML += `<div class='infoContainer'>${bonus} dias x ${inputSW.value}$ = ${bonusTotal}$ de aguinaldo</div>`
   
   const proporcion = 30/12
   
@@ -53,11 +56,11 @@ document.getElementById('form').addEventListener('submit', (e) => {
   
   const UMATotal = inputUMA.value * (propMonth+propDay)
   
-  info.innerHTML += `<div class='infoContainer'>${(propMonth+propDay)} x ${inputUMA.value}$ = ${UMATotal}$</div>`
+  info.innerHTML += `<div class='infoContainer'>${(propMonth+propDay)} x ${inputUMA.value}$ = ${UMATotal}$ propporcion del UMA</div>`
   
   
   const TOTAL = bonusTotal - UMATotal 
   
-  info.innerHTML += `<div class='infoContainer'>${bonusTotal}$ - ${UMATotal}$ = ${TOTAL}$</div>`
+  info.innerHTML += `<div class='infoContainer'>${bonusTotal}$ - ${UMATotal}$ = ${TOTAL}$ la diferencia</div>`
 
 }) 
